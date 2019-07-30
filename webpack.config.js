@@ -34,5 +34,10 @@ module.exports = {
     port: 8080,
     content: path.resolve(__dirname, 'public')
   },
+  devServer: {
+    contentBase: path.resolve(__dirname, 'src'),
+    inline: true,
+    hot: true
+  },
   plugins: [new HtmlWebpackPlugin({ template: 'src/index.html' })]
 }
